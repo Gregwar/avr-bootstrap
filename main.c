@@ -8,12 +8,8 @@ int main()
     DDRB |= _BV(PB5);
 
     while (1) {
-        // Led on
-        PORTB |= _BV(PB5);
-        _delay_ms(500);
-
-        // Led off
-        PORTB &= ~_BV(PB5);
+        // Toggle led
+        PORTB ^= _BV(PB5);
         _delay_ms(500);
     }
 }
